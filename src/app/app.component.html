@@ -1,7 +1,25 @@
-<h3>Черников Алексей Михайловия</h3>
-<p>Телефон: +7 (919) 257-53-66</p>
-<p>email: a.cher.ai19@gmail.com</p>
-<p>г.Липецк</p>
-<p>Опыт работы 2 года</p>
-<p>Охранник учебного заведения</p>
-<p><img src="./assets/myphoto.jpg" width="300" alt="myphoto"></p>
+<div class="contain">
+  <div class="photo"><img *ngIf="true" src="./assets/myphoto.jpg" width="300" alt="myphoto"></div>
+  <div class="inform">
+    <h3>Черников Алексей Михайловия</h3>
+    <p>Дата рождения: 01.06.2001г.</p>
+    <p>Телефон: +7 (919) 257-53-66</p>
+    <p>email: a.cher.ai19@gmail.com</p>
+    <p>г.Липецк</p>
+    <p>Опыт работы 2 года</p>
+    <p>Охранник учебного заведения</p>
+    <p>Мое хобби: компьютерные игры</p>
+
+  </div>
+</div>
+
+<div class="books">Любимые книги:
+  <table>
+    <tr><th>Автор:</th><th>Название книги:</th></tr>
+    <tr *ngFor="let book of books">
+      <td>{{book.author}}</td><td>{{book.booktitle}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="date">Дата заполнения резюме: {{nowdate|date:'longDate'|uppercase}} </div>
